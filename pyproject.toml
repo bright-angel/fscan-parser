@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "fscan-parser"
+version = "1.0.0"
+description = "Fscan扫描结果解析工具，自动补充IP列，导出三Sheet Excel"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [{name = "fscan_parser"}]
+keywords = ["fscan", "parser", "security", "excel"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+]
+
+dependencies = [
+    "openpyxl>=3.0",
+    "customtkinter>=5.2",
+]
+
+[project.scripts]
+fscan-parser = "fscan_parser.cli:main"
+fscan-parser-gui = "fscan_parser.gui:main"
+
+[project.urls]
+Homepage = "https://github.com/bright-angel/fscan-parser"
+
+[tool.setuptools.packages.find]
+include = ["fscan_parser*"]
