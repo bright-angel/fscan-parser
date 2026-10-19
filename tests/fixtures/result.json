@@ -1,0 +1,157 @@
+{
+  "scan_time": "2026-10-19T18:10:15.922750822+08:00",
+  "summary": {
+    "total_hosts": 2,
+    "total_ports": 3,
+    "total_services": 4,
+    "total_vulns": 3
+  },
+  "hosts": [
+    {
+      "time": "2026-10-19T18:10:15.631491136+08:00",
+      "type": "HOST",
+      "target": "192.168.1.1",
+      "status": "alive",
+      "details": {}
+    },
+    {
+      "time": "2026-10-19T18:10:15.631491196+08:00",
+      "type": "HOST",
+      "target": "192.168.1.5",
+      "status": "alive",
+      "details": {}
+    }
+  ],
+  "ports": [
+    {
+      "time": "2026-10-19T18:10:15.631491216+08:00",
+      "type": "PORT",
+      "target": "192.168.1.1",
+      "status": "open",
+      "details": {
+        "port": 22
+      }
+    },
+    {
+      "time": "2026-10-19T18:10:15.631491957+08:00",
+      "type": "PORT",
+      "target": "192.168.1.1",
+      "status": "open",
+      "details": {
+        "port": 445
+      }
+    },
+    {
+      "time": "2026-10-19T18:10:15.631492118+08:00",
+      "type": "PORT",
+      "target": "192.168.1.5",
+      "status": "open",
+      "details": {
+        "port": 3389
+      }
+    }
+  ],
+  "services": [
+    {
+      "time": "2026-10-19T18:10:15.631492268+08:00",
+      "type": "SERVICE",
+      "target": "192.168.1.1:22",
+      "status": "identified",
+      "details": {
+        "banner": "SSH-2.0-OpenSSH_7.4",
+        "os": "Linux",
+        "port": 22,
+        "product": "OpenSSH",
+        "service": "ssh",
+        "version": "OpenSSH 7.4"
+      }
+    },
+    {
+      "time": "2026-10-19T18:10:15.631492638+08:00",
+      "type": "SERVICE",
+      "target": "192.168.1.1:445",
+      "status": "identified",
+      "details": {
+        "port": 445,
+        "service": "smb",
+        "version": "Windows 7 SP1"
+      }
+    },
+    {
+      "time": "2026-10-19T18:10:15.631492989+08:00",
+      "type": "SERVICE",
+      "target": "192.168.1.5:80",
+      "status": "web",
+      "details": {
+        "fingerprints": [
+          "tomcat",
+          "java"
+        ],
+        "is_web": true,
+        "port": 80,
+        "server": "Apache-Coyote/1.1",
+        "service": "http",
+        "status": 200,
+        "title": "Apache Tomcat/9.0"
+      }
+    },
+    {
+      "time": "2026-10-19T18:10:15.63149351+08:00",
+      "type": "SERVICE",
+      "target": "192.168.1.5:443",
+      "status": "web",
+      "details": {
+        "is_web": true,
+        "port": 443,
+        "server": "nginx",
+        "service": "https",
+        "status": 403,
+        "title": "Welcome"
+      }
+    }
+  ],
+  "vulns": [
+    {
+      "time": "2026-10-19T18:10:15.63149378+08:00",
+      "type": "VULN",
+      "target": "192.168.1.5:80",
+      "status": "vulnerable",
+      "details": {
+        "password": "123456",
+        "service": "mysql",
+        "type": "weak_credential",
+        "username": "root"
+      }
+    },
+    {
+      "time": "2026-10-19T18:10:15.631494061+08:00",
+      "type": "VULN",
+      "target": "http://192.168.1.5:80",
+      "status": "vulnerable",
+      "details": {
+        "author": "shadow",
+        "description": "默认口令可登录",
+        "parameters": {
+          "password": "admin",
+          "username": "admin"
+        },
+        "references": [
+          "https://example.com/a"
+        ],
+        "vulnerability_name": "Tomcat 弱口令",
+        "vulnerability_type": "poc-yaml-tomcat-weak-password"
+      }
+    },
+    {
+      "time": "2026-10-19T18:10:15.631494922+08:00",
+      "type": "VULN",
+      "target": "192.168.1.1:445",
+      "status": "MS17-010",
+      "details": {
+        "service": "smb",
+        "type": "vulnerability",
+        "vulnerability": "MS17-010"
+      }
+    }
+  ]
+}

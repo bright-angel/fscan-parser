@@ -1,2 +1,0 @@
-include fscan_parser.py
-recursive-include fscan_parser *.py

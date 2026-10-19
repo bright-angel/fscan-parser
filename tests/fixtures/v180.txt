@@ -1,0 +1,15 @@
+[*] 开始信息扫描
+[+] 192.168.1.1:22 open
+[+] 192.168.1.1:445 open
+[+] 192.168.1.5:80 open
+[+] 192.168.1.5:3306 open
+[+] InfoScan:192.168.1.5:80             [Apache Tomcat/9.0]
+[+] InfoScan:192.168.1.1:22             [OpenSSH]
+[+] SSH:192.168.1.1:22:root:123456  (root)
+[+] mysql:192.168.1.5:3306:root:root
+[+] ftp://192.168.1.9:21:anonymous:anonymous
+[+] Redis:192.168.1.5:6379 unauthorized
+[*] WebTitle:http://192.168.1.5:80      len:8    code:200 title:Tomcat 欢迎页
+[+] http://192.168.1.5:80 poc-yaml-tomcat-weak-password 存在默认口令
+[+] MS17-010 192.168.1.1	(Windows 7 SP1)
+[*] LiveTop 192.168.1.0/24 段存活数量为: 3

@@ -1,0 +1,14 @@
+[+] 192.168.1.1:22 open
+[+] 192.168.1.1:445 open
+[+] 192.168.1.5:80 open
+[+] InfoScan 192.168.1.5:80             [Apache Tomcat/9.0] 200 Apache-Coyote/1.1 [tomcat,java]
+[+] InfoScan 192.168.1.1:22             [OpenSSH]
+[+] SSH 192.168.1.1:22:root:123456
+[+] mysql 192.168.1.5:3306:root:root
+[+] ftp 192.168.1.9:21:anonymous:anonymous
+[+] Redis 192.168.1.5:6379 unauthorized
+[*] WebTitle http://192.168.1.5:80      len:8    code:200 title:Tomcat 欢迎页
+[+] PocScan http://192.168.1.5:80 poc-yaml-tomcat-weak-password 参数:map[password:admin username:admin]
+[+] MS17-010 192.168.1.1	(Windows 7 SP1)
+[*] OsInfo 192.168.1.1	(Windows Server 2008 R2)
+[*] LiveTop 192.168.1.0/24 段存活数量为: 3

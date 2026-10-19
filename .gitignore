@@ -1,33 +1,7 @@
-# Bytecode
 __pycache__/
-*.py[cod]
-*.pyo
-
-# Distribution / packaging
-dist/
-build/
+*.pyc
+.pytest_cache/
 *.egg-info/
-*.egg
-.eggs/
-
-# Virtual environments
-venv/
-.venv/
-env/
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS
-.DS_Store
-Thumbs.db
-
-# PyInstaller
-*.spec
-*.manifest
-
-# Output
 *.xlsx
+!examples/*.xlsx
+dist/
